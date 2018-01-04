@@ -20,8 +20,11 @@
             speed: .15,
             // Total number of articulation in wave
             bones: 3,
-            // Color
-            color: 'rgba(255,255,255, 0.20)'
+            // Fill
+            fill: 'rgba(255,255,255, 0.20)',
+            // Stroke
+            stroke: 'rgba(255,255,255, 1)'
+
         }, options );
 
         var wave = this,
@@ -33,7 +36,7 @@
 
         //  Set color
         //
-        TweenLite.set(wave, {attr:{fill: settings.color}});
+        TweenLite.set(wave, {attr:{fill: settings.fill, stroke: settings.stroke}});
 
 
         function drawPoints(factor) {
